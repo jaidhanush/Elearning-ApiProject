@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Course Information</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Tutor Name</th>
+                    <th scope="col">Course Details FK </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tut in tutor %}
+                <tr>
+                    <th scope="row">{{tut.id}}</th>
+                    <td>{{tut.tutor_name}}</td>
+                    <td>{{tut.course_specialization}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
